@@ -1,0 +1,22 @@
+{
+  "name": "002-console",
+  "version": "1.0.0",
+  "description": "Homeworks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node date.js"
+  },
+  "bin": {
+    "current": "date.js",
+    "guess-the-number": "number.js"
+  },
+  "keywords": [],
+  "author": "",
+  "repository": {
+    "private": "true"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "yargs": "^16.2.0"
+  }
+}
