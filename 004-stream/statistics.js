@@ -15,11 +15,18 @@ const fileName = path.parse(argv._[0]).base;
     console.log(err);
   }
   if (data) {
+    const stats = data.game.reduce((acc, value) => {
+      acc = {
+        win: acc.win + value.win,
+        lose: acc.lose + value.lose
+      }
+      return acc;
+    }, {win: 0, lose: 0});
     console.log(`
       Общее количество партий: ${data.quantityGame}
-      Партий выиграно: ${data.win}
-      Партий проиграно: ${data.lose}
-      Процентное соотношение выигранный партий: ${((data.win * 100) / data.quantityGame).toFixed(2)}%
+      Партий выиграно: ${stats.win}
+      Партий проиграно: ${stats.lose}
+      Процентное соотношение выигранный партий: ${((stats.win * 100) / data.quantityGame).toFixed(2)}%
     `)
   }
 })();
