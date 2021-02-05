@@ -1,0 +1,19 @@
+{
+  "name": "004-stream",
+  "version": "1.0.0",
+  "description": "Homework, streams",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "bin": {
+    "game": "game.js",
+    "statistics": "statistics.js"
+  },
+  "keywords": [],
+  "author": "theart84",
+  "license": "ISC",
+  "devDependencies": {
+    "yargs": "^16.2.0"
+  }
+}
